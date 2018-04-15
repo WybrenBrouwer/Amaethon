@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="extra.css">
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <img src="./Logo_Amaethon.png"/>
+                </div>
+            </div>
+        </nav>
+        <div class="box">
+        <form class="form-horizontal">
+            <div class="form-group" id="asbest">
+                <label for="asbest">
+                   Weet u zeker dat uw dak asbest bevat? 
+                </label>
+                <input type="button" class="btn" value="Ja" id="ja1"></input>
+                <input type="button" class="btn" value="Nee" id="nee1"></input>
+            </div>
+            <div class="form-group notThere" id="inventarisatie">
+                    Heeft u al een inventarisatie rapport van een erkend bedrijf?
+                    <input type="button" class="btn" value="Ja" id="ja2"></input>
+                    <input type="button" class="btn" value="Nee" id="nee2"></input>
+            </div>
+            <div class="form-group notThere" id="dakoppervlak">
+                <label for="dakoppervlak">
+                    Weet u uw dakoppervlak?
+                </label>
+                <input type="button" class="btn" value="Ja" id="ja3"></input>
+                <input type="button" class="btn" value="Nee" id="nee3"></input>
+            </div>
+            <div class="form-group notThere" id="meters">
+                <label for="dak">
+                    Wat is uw dakoppervlak? (in m²)
+                </label>
+                <input class="form-control" type="number"></input>
+            </div>
+            <a href="./results.html" class="btn notThere" id="next">Ga door</a>
+        </form>
+        </div>
+        
+        <script>
+            $(document).ready(function() {
+
+                $("#ja1").click(function() {
+                    $("#inventarisatie").removeClass('notThere');
+                    $(this).addClass('clicked');
+                    $("#nee1").removeClass('clicked');
+                });
+                $("#nee1").click(function() {
+                    $("#inventarisatie").addClass('notThere');
+                    $(this).addClass('clicked');
+                    $("#ja1").removeClass('clicked');
+                });
+
+                $("#ja2").click(function() {
+                    $("#dakoppervlak").removeClass('notThere');
+                    $(this).addClass('clicked');
+                    $("#nee2").removeClass('clicked');
+                });
+                $("#nee2").click(function() {
+                    $("#dakoppervlak").addClass('notThere');
+                    $(this).addClass('clicked');
+                    $("#ja2").removeClass('clicked');
+                });
+
+                $("#ja3").click(function() {
+                    $("#meters").removeClass('notThere');
+                    $("#next").removeClass('notThere');
+                    $(this).addClass('clicked');
+                    $("#nee3").removeClass('clicked');
+                });
+                $("#nee3").click(function() {
+                    $("#meters").addClass('notThere');
+                    $("#next").addClass('notThere');
+                    $(this).addClass('clicked');
+                    $("#ja3").removeClass('clicked');
+                });
+
+            });
+        </script>
+    </body>
+
+
+
+    </html>

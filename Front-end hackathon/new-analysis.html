@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="new-analysis.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+
+<body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <img src="./Logo_Amaethon.png"/>
+                    </div>
+                </div>
+            </nav>
+    <div class="box">
+        <form oninput="x.value=parseInt(a.value); y.value=parseInt(b.value)">
+            <div class="form-group">
+                <label for="bedrijfsnaam">Bedrijfsnaam:</label>
+                <input type="text" class="form-control"></input>
+            </div>
+            <div class="form-group">
+                <label for="postcode">Postcode van bedrijfpand:</label>
+                <input type="text" class="form-control"></input>
+            </div>
+            <div class="form-group">
+                <label for="bedrijfstype">Type bedrijf:</label> 
+                <select class="form-control">
+                    <option value="melkveehouderij">Melkveehouderij</option>
+                    <option value="akkerbouw">Akkerbouw</option>
+                    <option value="tuinbouw">Tuinbouw</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="persoonsleden">Aantal persoonsleden:</label>
+                <output name="x" for="a">50</output>
+                <input class="form-control" type="range" name="a" id="a" value="50">
+            </div>
+            <div class="form-group">
+                <label for="jaaromzet">Gemiddelde jaaromzet:</label>
+                <output name="y" for="b">50</output>
+                <input class="form-control" type="range" name="b" id="b" value="50">
+                
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input class="form-control" type="email"></input>
+            </div>
+            <div class="form-group">
+                <label for="telefoon">Telefoonnummer:</label>
+                <input class="form-control" type="text"></input>
+            </div>
+            <a class="btn" id="submit" href="./investment.html">Ga door</a>
+        </form>
+    </div>
+</body>
+
+
+</html>

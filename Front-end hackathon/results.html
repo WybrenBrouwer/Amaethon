@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="results.css">
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+    </head>
+    
+    <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img src="./Logo_Amaethon.png"/>
+            </div>
+        </div>
+    </nav>
+    <h2>Beste keuze voor u</h2>
+    <div class="graph">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+        type: 'polarArea',
+        data: {
+            labels: ["Investeringskosten", "Fiscaal voordeel", "Subsidies", "Opbrengsten", "Zelfvoorzienendheid energie", "CO2-besparing"],
+            datasets: [{
+            backgroundColor: [
+                "#2ecc71",
+                "#3498db",
+                "#95a5a6",
+                "#9b59b6",
+                "#f1c40f",
+                "#e74c3c"
+            ],
+            data: [69110, 13794, 4500, 51000, 2000, 25700]
+            }]
+        }
+        });
+    </script>
+
+    </body>
+</html>

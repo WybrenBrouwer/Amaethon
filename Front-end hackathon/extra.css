@@ -1,0 +1,42 @@
+body {
+    background-image: url("https://images.pexels.com/photos/288621/pexels-photo-288621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.navbar {
+    background-color: white;
+    height: 50px;
+}
+
+.navbar img {
+    height: 45px;
+}
+
+.box {
+    width: 600px;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 5px; 
+    padding: 10px;
+    font-size: 25px;
+    font-family: 'Muli', sans-serif;
+}
+
+.btn {
+    background-color: white;
+    color: black;
+    border: 1px black solid;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.clicked {
+    background-color: black;
+    color: white;
+}
+
+.notThere {
+    display:none;
+}
